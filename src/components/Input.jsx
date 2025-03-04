@@ -23,7 +23,7 @@ function Input({ setLoading, setDocuments }) {
   };
 
   return (
-    <div className="fixed top-0 left-0 bg-gray-200 flex p-4 flex flex-col justify-between items-center h-[100vh]">
+    <div className="fixed top-0 left-0 bg-gray-200 flex p-4 w-[340px] max-w-[340px] flex-col justify-between items-center h-[100vh]">
       <div className="h-[200px] w-[300px]">
         <img src={courtroom} className="object-contain" />
       </div>
