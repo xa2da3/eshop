@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IoSendSharp } from "react-icons/io5";
 import courtroom from "../assets/courtroom.jpg";
 import axios from "axios";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Input({ setLoading, setDocuments }) {
   const [text, setText] = useState("");
@@ -9,7 +10,7 @@ function Input({ setLoading, setDocuments }) {
   const handleSubmit = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:8000/query", {
+      const response = await axios.post(`${apiUrl}/query`, {
         query: text,
       });
       setDocuments(response?.data?.results);
