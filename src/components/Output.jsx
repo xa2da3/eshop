@@ -29,6 +29,13 @@ function Output({ loading, documents }) {
                   <span className="font-bold">Document Name : </span>
                   <span>{doc?.document_name}</span>
                 </div>
+                <div>
+                  <span className="font-bold">Document Link : </span>
+                  {/* <span>{doc?.link}</span> */}
+                  <a href={doc?.link} target="_blank" className="underline">
+                    {doc?.link}
+                  </a>
+                </div>
                 <div className="flex gap-[10px]">
                   <span className="font-bold">Content</span>
                   <p>{doc?.content}</p>
