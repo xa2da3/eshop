@@ -31,7 +31,6 @@ function Output({ loading, documents }) {
                 </div>
                 <div>
                   <span className="font-bold">Document Link : </span>
-                  {/* <span>{doc?.link}</span> */}
                   <a href={doc?.link} target="_blank" className="underline">
                     {doc?.link}
                   </a>
