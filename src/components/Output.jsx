@@ -4,7 +4,7 @@ import { Hourglass } from "react-loader-spinner";
 function Output({ loading, documents }) {
   return (
     <div className="ml-[340px] h-full">
-      <div className="flex p-4 flex flex-col justify-between items-center">
+      <div className="flex p-4 flex-col justify-between items-center">
         {documents == null && <h1>Search for your query</h1>}
       </div>
       <div className="p-4 h-[calc(100vh-56px)]">
