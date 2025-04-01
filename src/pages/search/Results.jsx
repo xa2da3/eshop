@@ -5,21 +5,6 @@ import { TiDocumentText } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 function Results({ searchResults }) {
-  const items = [
-    {
-      header: "PDF DOC Name",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing...",
-    },
-    {
-      header: "Where does it come from?",
-      content: "Quisque eget luctus mi, vehicula mollis lorem...",
-    },
-    {
-      header: "Why do we use it?",
-      content: "Suspendisse massa risus, pretium id interdum in...",
-    },
-  ];
-
   return (
     <Accordion
       className="flex flex-col gap-[20px] w-full"
