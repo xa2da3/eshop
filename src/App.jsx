@@ -1,11 +1,12 @@
 import "./App.css";
-import Mainlayout from "./components/Mainlayout";
+import Mainlayout from "./layout/Mainlayout";
+import RouterComponent from "./router/RouterComponent";
 
 function App() {
   return (
-    <div className="h-[100vh]">
-      <Mainlayout />
-    </div>
+    <>
+      <RouterComponent />
+    </>
   );
 }
 

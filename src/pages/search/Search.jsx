@@ -1,0 +1,50 @@
+import React, { useState } from "react";
+import SearchInput from "./SearchInput";
+import Tabs from "./Tabs";
+import Results from "./Results";
+import axios from "axios";
+import config from "../../config/mainConfig";
+
+function Search() {
+  const [searchInput, setSearchInput] = useState("");
+  const [selectedTab, setSelectedTab] = useState("Case Law");
+  const [searchResults, setSearchResults] = useState([]);
+  const tabList = [
+    "Case Law",
+    "Statutes",
+    "Legal Analysis",
+    "Court Documents",
+    "Legal Commentary",
+  ];
+  const handleSearch = async () => {
+    try {
+      const res = await axios.post(`${config.apiURL}/query`, {
+        query: searchInput,
+      });
+      setSearchResults(res?.data?.results);
+    } catch (error) {
+      console.log(error);
+    } finally {
+    }
+  };
+  return (
+    <div className="flex flex-col gap-[30px]">
+      <SearchInput
+        setSearchInput={setSearchInput}
+        handleSearch={handleSearch}
+      />
+      <div className="flex flex-col gap-[20px]">
+        <h1 className="text-black font-semibold text-[20px]">Search Results</h1>
+        <Tabs
+          tabList={tabList}
+          setSelectedTab={setSelectedTab}
+          selectedTab={selectedTab}
+        />
+
+        <Results searchResults={searchResults}/>
+      </div>
+    </div>
+  );
+}
+
+export default Search;

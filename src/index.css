@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-sidebar-bg: #f7f6ff;
+  --color-input-bg: #f8f8f7;
+  --color-primary-purple: #e8e5ff;
+}
+
+.szh-accordion__item-btn {
+  width: 100% !important;
+}
