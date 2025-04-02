@@ -4,6 +4,9 @@
   --color-sidebar-bg: #f7f6ff;
   --color-input-bg: #f8f8f7;
   --color-primary-purple: #e8e5ff;
+
+  --color-secondary-purple: #634aff;
+  --color-tert-purple: #e0deff;
 }
 
 .szh-accordion__item-btn {

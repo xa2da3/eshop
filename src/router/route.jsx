@@ -1,10 +1,15 @@
 import Dashboard from "../components/Dashboard";
 import Mainlayout from "../layout/Mainlayout";
+import LandingPage from "../pages/landingpage/LandingPage";
 import Search from "../pages/search/Search";
 
 const routes = [
   {
     path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/search",
     element: <Mainlayout />,
     children: [
       {
