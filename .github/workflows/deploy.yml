@@ -21,7 +21,8 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             cd /var/www/lex-arbitra.akshuakr.com/lex-arbitra-frontend
-            git pull origin main
-            npm install
+            git fetch origin
+            git reset --hard origin/main
+            npm install --force
             npm run build
 
