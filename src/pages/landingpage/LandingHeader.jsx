@@ -11,12 +11,12 @@ function LandingHeader() {
         <Link className="text-[16px] font-normal">About</Link>
       </div>
       <div className="flex items-center gap-[20px]">
-        <button className="px-4 py-2 bg-sidebar-bg text-secondary-purple rounded-xl text-[16px] font-semibold cursor-pointer">
+        {/* <button className="px-4 py-2 bg-sidebar-bg text-secondary-purple rounded-xl text-[16px] font-semibold cursor-pointer">
           Login
         </button>
         <button className="px-4 py-2 text-sidebar-bg bg-secondary-purple rounded-xl text-[16px] font-semibold cursor-pointer">
           Start free
-        </button>
+        </button> */}
       </div>
     </div>
   );

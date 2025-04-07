@@ -4,7 +4,10 @@ import { GoLaw } from "react-icons/go";
 import { TiDocumentText } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
-function Results({ searchResults }) {
+function Results({ searchResults, loading }) {
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <Accordion
       className="flex flex-col gap-[20px] w-full"

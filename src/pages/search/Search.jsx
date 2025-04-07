@@ -4,11 +4,13 @@ import Tabs from "./Tabs";
 import Results from "./Results";
 import axios from "axios";
 import config from "../../config/mainConfig";
+import TextArea from "./TextArea";
 
 function Search() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedTab, setSelectedTab] = useState("Case Law");
   const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
   const tabList = [
     "Case Law",
     "Statutes",
@@ -18,6 +20,7 @@ function Search() {
   ];
   const handleSearch = async () => {
     try {
+      setLoading(true);
       const res = await axios.post(`${config.apiURL}/query`, {
         query: searchInput,
       });
@@ -25,14 +28,16 @@ function Search() {
     } catch (error) {
       console.log(error);
     } finally {
+      setLoading(false);
     }
   };
   return (
     <div className="flex flex-col gap-[30px]">
-      <SearchInput
+      {/* <SearchInput
         setSearchInput={setSearchInput}
         handleSearch={handleSearch}
-      />
+      /> */}
+      <TextArea setSearchInput={setSearchInput} handleSearch={handleSearch} />
       <div className="flex flex-col gap-[20px]">
         <h1 className="text-black font-semibold text-[20px]">Search Results</h1>
         <Tabs
@@ -41,7 +46,7 @@ function Search() {
           selectedTab={selectedTab}
         />
 
-        <Results searchResults={searchResults}/>
+        <Results searchResults={searchResults} loading={loading} />
       </div>
     </div>
   );

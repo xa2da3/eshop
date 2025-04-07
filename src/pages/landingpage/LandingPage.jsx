@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <div>
       <LandingHeader />
-      <div className="px-[40px] py-[60px] flex flex-col gap-[80px]">
+      <div className="px-[40px] pt-[40px] pb-[60px] flex flex-col gap-[80px]">
         <LandingBody />
         <WhyChoose />
         <HowItWorks />
