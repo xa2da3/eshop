@@ -14,18 +14,17 @@ function LandingBody() {
           Trained on 40,000 cases from 10 different countries
         </h2> */}
         <div className="flex flex-col gap-[10px]">
-          <div className="grid grid-cols-[40%_60%] gap-[60px]">
-            <div className="text-[44px] font-semibold flex flex-col justify-center">
-              <span>Smart Arbitration</span>
-              <span>Starts Here</span>
+          <div className="grid grid-cols-2 gap-[40px]">
+            <div className="text-[44px] font-semibold flex flex-col justify-center w-full">
+              Smart Arbitration Starts Here
+              <h2 className="text-[20px] text-gray-400 font-medium">
+                Intelligence at Every Step - From Research to Award
+              </h2>
             </div>
             <div className="h-[550px]">
               <img src={img3} className="w-full h-full object-contain" />
             </div>
           </div>
-          <h2 className="text-[20px] text-gray-400 font-medium">
-            Intelligence at Every Step - From Research to Award
-          </h2>
         </div>
         <div className="flex items-center gap-[20px] mt-[30px]">
           <button

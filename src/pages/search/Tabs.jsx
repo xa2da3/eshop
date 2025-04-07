@@ -1,4 +1,5 @@
 import React from "react";
+import { Tooltip } from "react-tooltip";
 
 function Tabs({ tabList, setSelectedTab, selectedTab }) {
   return (
@@ -10,7 +11,7 @@ function Tabs({ tabList, setSelectedTab, selectedTab }) {
             className={`py-2 text- cursor-pointer ${
               selectedTab == item
                 ? "border-b-2 text-black font-medium"
-                : "text-gray-500 font-normal"
+                : "text-gray-500 font-normal my-anchor-element"
             }`}
             // onClick={() => setSelectedTab(item)}
           >
@@ -18,6 +19,9 @@ function Tabs({ tabList, setSelectedTab, selectedTab }) {
           </span>
         );
       })}
+      <Tooltip anchorSelect=".my-anchor-element" place="top">
+          We are working on it, Stay Tunned !
+        </Tooltip>
     </div>
   );
 }

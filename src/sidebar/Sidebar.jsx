@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { sidebarItems, sidebarTools } from "./sidebarItems";
+import { Tooltip } from "react-tooltip";
 
 function Sidebar() {
   const [selectedTab, setSelectedTab] = useState("Search");
@@ -14,7 +15,9 @@ function Sidebar() {
             <li
               key={index}
               className={`cursor-pointer p-2 font-medium text-[16px] flex items-center gap-[15px] ${
-                item.label == selectedTab ? "bg-primary-purple rounded-md" : ""
+                item.label == selectedTab
+                  ? "bg-primary-purple rounded-md"
+                  : "my-anchor-element"
               }`}
             >
               {item.icon}
@@ -31,13 +34,16 @@ function Sidebar() {
           return (
             <li
               key={index}
-              className="cursor-pointer p-2 font-medium text-[16px] flex items-center gap-[15px]"
+              className="my-anchor-element cursor-pointer p-2 font-medium text-[16px] flex items-center gap-[15px]"
             >
               {item.icon}
               <span>{item.label}</span>
             </li>
           );
         })}
+        <Tooltip anchorSelect=".my-anchor-element" place="top">
+          We are working on it, Stay Tunned !
+        </Tooltip>
       </ol>
     </div>
   );
