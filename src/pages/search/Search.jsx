@@ -21,10 +21,11 @@ function Search() {
   const handleSearch = async () => {
     try {
       setLoading(true);
-      const res = await axios.post(`${config.apiURL}/query`, {
+      const res = await axios.post(`${config.apiURL}/model/search`, {
         query: searchInput,
       });
-      setSearchResults(res?.data?.results);
+      console.log(res.data.data.results);
+      setSearchResults(res?.data?.data?.results);
     } catch (error) {
       console.log(error);
     } finally {

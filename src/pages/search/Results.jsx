@@ -9,11 +9,7 @@ function Results({ searchResults, loading }) {
     return <div>Loading...</div>;
   }
   return (
-    <Accordion
-      className="flex flex-col gap-[20px] w-full"
-      transition
-      transitionTimeout={250}
-    >
+    <Accordion className="flex flex-col gap-[20px] w-full" transition transitionTimeout={250}>
       {searchResults?.map((item, i) => (
         <AccordionItem
           header={
@@ -27,14 +23,31 @@ function Results({ searchResults, loading }) {
           key={i}
         >
           <div className="bg-sidebar-bg px-4 pb-4 text-black w-full rounded-b-2xl text-start flex flex-col">
-            {item?.link != "Unknown" && (
+            {item?.link !== "Unknown" && item?.chunk_divs && item?.document_link ? (
               <Link
-                to={item?.link}
+                to={{
+                  pathname: "/html",
+                  search: `?document_link=${item.document_link}&chunk_divs=${encodeURIComponent(
+                    JSON.stringify(item.chunk_divs)
+                  )}`,
+                  state: {
+                    chunk_divs: item.chunk_divs,
+                    document_link: item.document_link,
+                  },
+                }}
                 target="_blank"
                 className="w-fit text-blue-400 text-[16px] font-normal"
+                onClick={() =>
+                  console.log("Link clicked with state:", {
+                    chunk_divs: item.chunk_divs,
+                    document_link: item.document_link,
+                  })
+                }
               >
-                Dcoument PDF (Page number : {item?.page_number})
+                Open Document
               </Link>
+            ) : (
+              <span className="text-red-500">Missing chunk_divs or document_link</span>
             )}
             {item?.content}
           </div>

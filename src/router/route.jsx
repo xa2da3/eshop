@@ -2,6 +2,7 @@ import Dashboard from "../components/Dashboard";
 import Mainlayout from "../layout/Mainlayout";
 import LandingPage from "../pages/landingpage/LandingPage";
 import Search from "../pages/search/Search";
+import LoadDocument from "../pages/LoadDocument/LoadDocument";
 
 const routes = [
   {
@@ -23,6 +24,16 @@ const routes = [
       {
         path: "search",
         element: <Search />,
+      },
+    ],
+  },
+  {
+    path: "/html",
+    element: <Mainlayout />,
+    children: [
+      {
+        path: "",
+        element: <LoadDocument />,
       },
     ],
   },
