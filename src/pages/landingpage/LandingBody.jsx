@@ -16,7 +16,7 @@ function LandingBody() {
         <div className="flex flex-col gap-[10px]">
           <div className="grid grid-cols-2 gap-[40px]">
             <div className="text-[44px] font-semibold flex flex-col justify-center w-full">
-              Smart Arbitration Starts Here 123
+              Smart Arbitration Starts Here
               <h2 className="text-[20px] text-gray-400 font-medium">
                 Intelligence at Every Step - From Research to Award
               </h2>
