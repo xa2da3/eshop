@@ -75,7 +75,7 @@ const LoadDocument = () => {
         ref={iframeRef}
         title="Document Content"
         className={`w-full ${isLoading || error ? "hidden" : "block"}`}
-        style={{ height: "600px", border: "none" }}
+        style={{ height: "95vh", border: "1px solid black" }}
       />
     </div>
   );
