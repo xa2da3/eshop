@@ -49,7 +49,7 @@ function Results({ searchResults, loading }) {
             ) : (
               <span className="text-red-500">Missing chunk_divs or document_link</span>
             )}
-            {item?.content}
+            {/* {item?.content} */}
           </div>
         </AccordionItem>
       ))}
