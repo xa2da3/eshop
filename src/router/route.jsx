@@ -3,11 +3,16 @@ import Mainlayout from "../layout/Mainlayout";
 import LandingPage from "../pages/landingpage/LandingPage";
 import Search from "../pages/search/Search";
 import LoadDocument from "../pages/LoadDocument/LoadDocument";
+import LandingPageV1 from "../pages/LandingPageV1/LandingPageV1";
 
 const routes = [
   {
     path: "/",
     element: <LandingPage />,
+  },
+  {
+    path: "/landing",
+    element: <LandingPageV1/>,
   },
   {
     path: "/search",
