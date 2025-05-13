@@ -20,8 +20,19 @@ const LandingPageV1 = () => {
           </button>
         </div>
         <div className={styles.demoContainer}>
-          <button className={styles.demoButton}>Schedule a Demo</button>
-          <button className={styles.contactButton}>Contact Sales</button>
+          <button className={styles.demoButton}>
+            <a href="https://calendly.com/kabrapratham/30min" target="_blank">
+              Schedule a Demo
+            </a>
+          </button>
+          <button className={styles.contactButton}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeL2MmpOw4I-lmJK75HBykrkzcRBJvj2a8H30sweVPxyOgAig/viewform?usp=sharing"
+              target="_blank"
+            >
+              Contact Sales
+            </a>
+          </button>
         </div>
       </div>
 
