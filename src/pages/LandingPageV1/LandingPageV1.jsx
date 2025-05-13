@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./LandingPageV1.module.scss";
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const LandingPageV1 = () => {
   return (
@@ -28,7 +29,7 @@ const LandingPageV1 = () => {
         <iframe
           width="60%"
           height="500px"
-          src="https://www.youtube.com/embed/vE_Z4fTwDDc?si=u0wZsO1V7_Tk2gM2"
+          src="https://www.youtube.com/embed/YM4VgA0hfXg?si=GW7TC9M3UMFWsMfc"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -104,6 +105,11 @@ const LandingPageV1 = () => {
               </div>
             </div>
           </div>
+
+          <button className={styles.searchButtonV1}>
+            Search Now
+            <img src="/icons/search.svg" loading="lazy" />
+          </button>
         </div>
         <div className={styles.workingImageBox}>
           <img
@@ -160,6 +166,8 @@ const LandingPageV1 = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

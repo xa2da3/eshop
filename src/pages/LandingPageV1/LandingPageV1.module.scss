@@ -166,16 +166,17 @@
 }
 
 .workingPointsBox {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    // align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  // align-items: center;
+  margin-bottom: 25px;
 }
 
 .workingPointItem {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .workingPointItemDetails {
@@ -199,6 +200,36 @@
   letter-spacing: 0%;
   color: #000000;
   // vertical-align: middle;
+}
+
+.searchButtonV1 {
+  background: linear-gradient(0deg, #634aff, #634aff),
+    linear-gradient(
+      1.51deg,
+      #0e0066 -23.08%,
+      rgba(99, 74, 255, 0.5) 10.87%,
+      rgba(99, 74, 255, 0.5) 86.4%,
+      #b9adff 121.04%
+    );
+  color: #ffffff;
+  font-family: var(--font-lato);
+  font-weight: 600;
+  font-size: 20px;
+  // leading-trim: Cap height;
+  line-height: 120%;
+  letter-spacing: 2%;
+  text-align: center;
+  color: rgba(247, 246, 255, 1);
+  // vertical-align: middle;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  border-radius: 50px;
+
+  cursor: pointer;
 }
 
 .workingImageBox {

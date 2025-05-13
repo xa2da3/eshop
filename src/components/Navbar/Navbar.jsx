@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className={styles.navItems}>Pricing</div>
         <div className={styles.navItems}>About</div>
         <div className={styles.navItems}>Products</div>
-        <div className={styles.navItemButton}>Try Demo Now</div>
+        <div className={styles.navItemButton}>Log In</div>
       </div>
     </div>
   );
