@@ -5,17 +5,23 @@ import Results from "./Results";
 import axios from "axios";
 import config from "../../config/mainConfig";
 import TextArea from "./TextArea";
+import { useNavigate } from "react-router-dom";
 
 function Search() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedTab, setSelectedTab] = useState("Case Law");
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const tabList = ["Case Law", "Statutes", "Legal Analysis", "Court Documents", "Legal Commentary"];
 
   // 👇 Fetch from sessionStorage on first render
   useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (!isLoggedIn) {
+      navigate("/");
+    }
     const query = sessionStorage.getItem("query");
     if (query) {
       setSearchInput(query);
@@ -40,7 +46,11 @@ function Search() {
 
   return (
     <div className="flex flex-col gap-[30px]">
-      <TextArea searchInput={searchInput} setSearchInput={setSearchInput}  handleSearch={handleSearch} />
+      <TextArea
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        handleSearch={handleSearch}
+      />
       <div className="flex flex-col gap-[20px]">
         <h1 className="text-black font-semibold text-[20px]">Search Results</h1>
         <Tabs tabList={tabList} setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
