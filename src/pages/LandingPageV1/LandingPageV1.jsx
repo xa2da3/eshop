@@ -76,7 +76,7 @@ const LandingPageV1 = () => {
         ></iframe>
       </div>
 
-      <div className={styles.whyToChooseContainer}>
+      <div id="features" className={styles.whyToChooseContainer}>
         <h2 className={styles.whyToChooseHeading}>Why Choose Our Case Search?</h2>
 
         <div className={styles.whyToChooseItems}>
@@ -107,7 +107,7 @@ const LandingPageV1 = () => {
         </div>
       </div>
 
-      <div className={styles.workingContainer}>
+      <div id="about" className={styles.workingContainer}>
         <div className={styles.workingBox}>
           <h3 className={styles.workingHeading}>
             How <span style={{ fontWeight: "600" }}>Lex Arbitra</span> Works
@@ -151,14 +151,15 @@ const LandingPageV1 = () => {
         <div className={styles.workingImageBox}>
           <img
             width="701px"
-            src="/images/working.png"
+            // height="400px"
+            src="/images/working1.jpg"
             loading="lazy"
             className={styles.workingImageStyles}
           />
         </div>
       </div>
 
-      <div className={styles.productsContainer}>
+      <div id="products" className={styles.productsContainer}>
         <div className={styles.productsTypeA}>
           <div className={styles.productDetailsBox}>
             <h4 className={styles.productDetailsHeading}>
