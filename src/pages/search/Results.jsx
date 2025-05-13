@@ -31,6 +31,7 @@ function Results({ searchResults, loading }) {
             >
               Open PDF
             </a>
+            <div>Page Number: {item?.page_number}</div>
             {item?.content}
           </div>
         </AccordionItem>

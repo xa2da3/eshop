@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LandingPageV1.module.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const LandingPageV1 = () => {
+  const navigate = useNavigate();
+
+  const [query, setQuery] = useState("");
+
+  const handleHeroSearch = () => {
+    // console.log(query);
+    sessionStorage.setItem("query", query);
+    navigate("/login");
+  };
   return (
     <div className={styles.container}>
       <Navbar />
@@ -14,8 +24,17 @@ const LandingPageV1 = () => {
           Intelligence at Every Step - From Research to Award
         </h3>
         <div className={styles.searchContainer}>
-          <input placeholder="Keyword, document, case number, etc." className={styles.input} />
-          <button style={{ borderRadius: "32px" }} className={styles.searchButton}>
+          <input
+            placeholder="Keyword, document, case number, etc."
+            className={styles.input}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button
+            style={{ borderRadius: "32px" }}
+            className={styles.searchButton}
+            onClick={handleHeroSearch}
+          >
             Search
           </button>
         </div>
@@ -117,7 +136,7 @@ const LandingPageV1 = () => {
             </div>
           </div>
 
-          <button className={styles.searchButtonV1}>
+          <button className={styles.searchButtonV1} onClick={() => navigate("/login")}>
             Search Now
             <img src="/icons/search.svg" loading="lazy" />
           </button>

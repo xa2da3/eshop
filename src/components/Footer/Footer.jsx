@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import { Tooltip } from "react-tooltip";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className={styles.container}>
       <div className={styles.left}>
@@ -11,7 +13,7 @@ const Footer = () => {
           <h4 className={styles.leftTopPunch}>
             Intelligence at Every Step - From Research to Award
           </h4>
-          <button className={styles.searchButtonV1}>
+          <button className={styles.searchButtonV1} onClick={() => navigate("/login")}>
             Search Now
             <img src="/icons/search.svg" loading="lazy" />
           </button>
