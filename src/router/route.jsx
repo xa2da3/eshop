@@ -4,15 +4,20 @@ import LandingPage from "../pages/landingpage/LandingPage";
 import Search from "../pages/search/Search";
 import LoadDocument from "../pages/LoadDocument/LoadDocument";
 import LandingPageV1 from "../pages/LandingPageV1/LandingPageV1";
+import Login from "../pages/Auth/Login/Login";
 
 const routes = [
   {
     path: "/",
-    element: <LandingPage />,
+    element: <LandingPageV1 />,
   },
   {
     path: "/landing",
     element: <LandingPageV1/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
   {
     path: "/search",
