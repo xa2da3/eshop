@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { Tooltip } from "react-tooltip";
 
 const Footer = () => {
   return (
@@ -19,25 +20,34 @@ const Footer = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.listContainer}>
-          <div style={{color: '#000000'}} className={styles.text}>Legal</div>
-          <div className={styles.text}>Privacy Policy</div>
-          <div className={styles.text}>Cookies</div>
+          <div style={{ color: "#000000" }} className={styles.text}>
+            Legal
+          </div>
+          <div className={`${styles.text} shared-tooltip`}>Privacy Policy</div>
+          <div className={`${styles.text} shared-tooltip`}>Cookies</div>
         </div>
         <div className={styles.listContainer}>
-            <div style={{color: '#000000'}} className={styles.text}>Product</div>
-            <div className={styles.text}>Features</div>
-            <div className={styles.text}>Process</div>
-            <div className={styles.text}>Customers</div>
-            <div className={styles.text}>Pricing</div>
+          <div style={{ color: "#000000" }} className={styles.text}>
+            Product
+          </div>
+          <div className={`${styles.text} shared-tooltip`}>Features</div>
+          <div className={`${styles.text} shared-tooltip`}>Process</div>
+          <div className={`${styles.text} shared-tooltip`}>Customers</div>
+          <div className={`${styles.text} shared-tooltip`}>Pricing</div>
         </div>
         <div className={styles.listContainer}>
-            <div style={{color: '#000000'}} className={styles.text}>Pages</div>
-            <div className={styles.text}>Home</div>
-            <div className={styles.text}>Blog Index</div>
-            <div className={styles.text}>Blog</div>
-            <div className={styles.text}>404</div>
+          <div style={{ color: "#000000" }} className={styles.text}>
+            Pages
+          </div>
+          <div className={`${styles.text} shared-tooltip`}>Home</div>
+          <div className={`${styles.text} shared-tooltip`}>Blog Index</div>
+          <div className={`${styles.text} shared-tooltip`}>Blog</div>
+          {/* <div className={styles.text}>404</div> */}
         </div>
       </div>
+      <Tooltip anchorSelect=".shared-tooltip" place="top">
+        We are working on it, stay tuned!
+      </Tooltip>
     </footer>
   );
 };

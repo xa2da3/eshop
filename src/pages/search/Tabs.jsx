@@ -20,7 +20,7 @@ function Tabs({ tabList, setSelectedTab, selectedTab }) {
         );
       })}
       <Tooltip anchorSelect=".my-anchor-element" place="top">
-          We are working on it, Stay Tunned !
+          We are working on it, Stay Tuned !
         </Tooltip>
     </div>
   );

@@ -14,7 +14,7 @@ function LandingHeader() {
         </Link>
         <Link className="text-[16px] font-normal my-anchor-element">About</Link>
         <Tooltip anchorSelect=".my-anchor-element" place="top">
-          We are working on it, Stay Tunned !
+          We are working on it, Stay Tuned !
         </Tooltip>
       </div>
       <div className="flex items-center gap-[20px]">
