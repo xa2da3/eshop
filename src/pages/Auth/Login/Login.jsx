@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.scss";
 import Navbar from "../../../components/Navbar/Navbar";
@@ -12,10 +12,20 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "tech.lexarbitra@gmail.com" && password === "TestUser@123") {
+      localStorage.setItem("isLoggedIn", "true");
+      navigate("/search");
+    }else {
+      window.alert("Invalid email or password. Please try again.");
+      console.log("Invalid Credentials");
+    }
+  };
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (isLoggedIn) {
       navigate("/search");
     }
-    console.log("Invalid Credentials");
-  };
+  }, []);
   return (
     <div className={styles.container}>
       <Navbar />

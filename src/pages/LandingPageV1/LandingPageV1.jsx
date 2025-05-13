@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LandingPageV1.module.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -14,6 +14,13 @@ const LandingPageV1 = () => {
     sessionStorage.setItem("query", query);
     navigate("/login");
   };
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (isLoggedIn) {
+      navigate("/search");
+    }
+  }, []);
   return (
     <div className={styles.container}>
       <Navbar />
