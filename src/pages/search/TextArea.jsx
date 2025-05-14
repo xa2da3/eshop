@@ -5,11 +5,20 @@ function TextArea({ searchInput, setSearchInput, handleSearch }) {
   const editableDivRef = useRef(null);
 
   // Set initial content from searchInput
+  // useEffect(() => {
+  //   if (editableDivRef.current && searchInput) {
+  //     editableDivRef.current.innerText = searchInput;
+  //   }
+  // }, [searchInput]);
+
   useEffect(() => {
-    if (editableDivRef.current && searchInput) {
-      editableDivRef.current.innerText = searchInput;
-    }
-  }, [searchInput]);
+  if (
+    editableDivRef.current &&
+    editableDivRef.current.innerText !== searchInput
+  ) {
+    editableDivRef.current.innerText = searchInput;
+  }
+}, [searchInput]);
 
   return (
     <div className="flex flex-col gap-[10px] w-full">
