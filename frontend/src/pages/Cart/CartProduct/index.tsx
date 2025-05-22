@@ -36,7 +36,7 @@ const CartProduct: FC<CartProps> = ({ item, onClick }) => {
         <div className={styles.cartCardDetails}>
           <div className={styles.cartCardLeft}>
             <div className={styles.title}>{item.product.name}</div>
-{/*             <div className={styles.size}>Size: {item.product.size}</div> {/* Display size here */} */}
+            <div className={styles.size}>Size: {item.product.size}</div> {/* Display size here */}
             <div className={styles.price}>$ {item.product.price}</div>
           </div>
         </div>
