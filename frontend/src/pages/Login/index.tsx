@@ -37,10 +37,10 @@ const LoginPage = () => {
     }
   };
 
-  const logoutHandler = async () => {
-    await dispatch(logout());
-    navigate("/");
-  };
+  // const logoutHandler = async () => {
+  //   await dispatch(logout());
+  //   navigate("/");
+  // };
 
   if (isLoading) return <Spinner />;
 
