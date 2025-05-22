@@ -36,8 +36,10 @@ const Catalog = () => {
 
     const category = navData.find((item) => item.name === id?.toString());
     if (category?.value !== "all") {
-      const pathUrl = ROUTES.find((item) => item.name.toLowerCase() === category?.value.toLowerCase());
-      dispatch(getCategory(pathUrl.url.toLowerCase()));
+      const pathUrl = ROUTES.find((item) => item.name.toLowerCase() === category.value.toLowerCase());
+      if (pathUrl?.url) {
+        dispatch(getCategory(pathUrl.url.toLowerCase()));
+      }
     } else {
       dispatch(getProducts());
     }
@@ -65,7 +67,7 @@ const Catalog = () => {
               key={index}
               title={product.name}
               name={product.name}
-              price={product.retailPrice}
+              price={product.retailPrice ?? 0}
               // category={product.category}
               // description={product.description}
               image={product.thumbnail_url}
