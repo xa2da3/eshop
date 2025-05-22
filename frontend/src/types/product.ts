@@ -1,11 +1,7 @@
 export interface Product {
   id: number;
-  external_id: string;
-  variants: number;
-  synced: number;
-  name: string;
-  thumbnail_url: string;
+  key: string;
+  title: string;
   price: number;
-  retailPrice?: string;
-  size: string
+  thumbnail_url: string;
 }
