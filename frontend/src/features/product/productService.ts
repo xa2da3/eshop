@@ -16,7 +16,7 @@ const getSingleProduct = async (id: number) => {
 
 const getCategory = async (category: string) => {
   const products = await getProducts();
-  const filteredProducts = products.filter(product =>
+  const filteredProducts = products.filter((product: Product) =>
     product.name.toLowerCase().includes(category.toLowerCase())
   );
   return filteredProducts;
