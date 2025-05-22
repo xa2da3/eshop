@@ -143,7 +143,8 @@ const Product = () => {
                     <div className={styles.buttonContainer}>
                       {availableColors.map((color) => {
                         const variant = product.sync_variants.find(v => v.color === color);
-                        const colorThumbnail = variant && variant.files && variant.files.find(file => file.type === 'preview') ? variant.files?.find(file => file.type === 'preview').thumbnail_url : null;
+                        const colorThumbnail = variant?.files?.find(file => file.type === 'preview')?.thumbnail_url ?? null;
+                        // const colorThumbnail = variant && variant.files && variant.files.find(file => file.type === 'preview') ? variant.files?.find(file => file.type === 'preview').thumbnail_url : null;
 
                         return (
                           <div className={styles.button} key={color}>
