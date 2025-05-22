@@ -125,7 +125,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.status = STATUS.IDLE;
       })
-      .addCase(register.rejected, (state, action: PayloadAction<string>) => {
+      .addCase(register.rejected, (state) => {
         state.isLoading = false;
         state.isError = true;
         state.status = STATUS.ERROR;
@@ -141,7 +141,7 @@ const authSlice = createSlice({
         state.token = action.payload;
         state.status = STATUS.IDLE;
       })
-      .addCase(login.rejected, (state, action: PayloadAction<string>) => {
+      .addCase(login.rejected, (state) => {
         state.isLoading = false;
         state.isError = true;
         state.status = STATUS.ERROR;
@@ -156,7 +156,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         state.status = STATUS.IDLE;
       })
-      .addCase(getUser.rejected, (state, action: PayloadAction<string>) => {
+      .addCase(getUser.rejected, (state) => {
         state.isLoading = false;
         state.isError = true;
         state.status = STATUS.ERROR;
@@ -173,7 +173,7 @@ const authSlice = createSlice({
         state.token = "";
         state.status = STATUS.IDLE;
       })
-      .addCase(logout.rejected, (state, action: PayloadAction<string>) => {
+      .addCase(logout.rejected, (state) => {
         state.isLoading = false;
         state.isError = true;
         state.status = STATUS.ERROR;
