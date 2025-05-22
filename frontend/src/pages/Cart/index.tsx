@@ -78,7 +78,7 @@ const Cart = () => {
                     <div className={styles.cartCardDetails}>
                       <div className={styles.cartCardLeft}>
                         <div className={styles.title}>{item.product.name}</div>
-                        <div className={styles.size}>Size: {item.product.size}</div>
+{/*                         <div className={styles.size}>Size: {item.product.size}</div> */}
                         <div className={styles.price}>${item.product.price}</div>
                         <div className={styles.return}>
                           <div className={styles.iconContainer}>
