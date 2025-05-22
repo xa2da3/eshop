@@ -51,7 +51,7 @@ const Navbar: React.FC<NavBarProps> = ({ handleShow }) => {
     ? `${styles.nav} ${styles.hasScrolled}`
     : styles.nav;
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/catalog/search?query=${searchQuery}`);
