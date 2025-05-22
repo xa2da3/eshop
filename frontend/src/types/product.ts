@@ -5,10 +5,14 @@ export interface Product {
   price: number;
   size?: string
   synced?: number;
-  variants?: number;
   external_id?: string;
   retailPrice?: number;
   category?: string;
   description?: string;
-  sync_variants?: number[];
+  sync_variants?: Variant[];
+}
+
+export interface Variant {
+  size: string;
+  color: string;
 }
