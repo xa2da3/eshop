@@ -9,5 +9,6 @@ export interface Product {
   external_id?: string;
   retailPrice?: number;
   category?: string;
+  description?: string;
   sync_variants?: number[];
 }
