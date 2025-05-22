@@ -3,7 +3,6 @@ import productService from "./productService";
 import { toast } from "react-toastify";
 import { Product } from "../../types/product";
 import { STATUS } from "../../constants/Status";
-import axiosConfig from "../../app/axiosConfig";
 
 interface ProductState {
   products: Product[];
