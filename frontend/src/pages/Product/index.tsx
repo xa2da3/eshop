@@ -59,7 +59,7 @@ const Product = () => {
   const addToCartHandler = () => {
     setIsLoadingProduct(true);
     if (product && selectedVariant) {
-      const previewFile = selectedVariant.files?.find((file: File) => file.type === 'preview') : null;
+      const previewFile = selectedVariant.files?.find((file: File) => file.type === 'preview');
       const cartProduct: CartItem = {
         quantity: 1,
         product: {
