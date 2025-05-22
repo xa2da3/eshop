@@ -12,6 +12,8 @@ import Spinner from "../Spinner";
 
 interface ProductCardProps extends Product {
   key: number;
+  title: string;
+  image: string;
 }
 
 const ProductCard: FC<ProductCardProps> = ({
