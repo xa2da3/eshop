@@ -20,4 +20,5 @@ export interface Variant {
 
 export interface File {
   type: string;
+  thumbnail_url: string;
 }
