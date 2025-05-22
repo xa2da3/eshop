@@ -13,6 +13,7 @@ export interface Product {
 }
 
 export interface Variant {
+  name: string;
   size: string;
   color: string;
   retail_price: number;
