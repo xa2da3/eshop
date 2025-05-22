@@ -77,10 +77,12 @@ const QuickView = () => {
                 id={product.id}
                 key={index}
                 title={product.name}
+                name={product.name}
                 price={product.price}
                 category={product.category}
                 description={product.description}
                 image={product.thumbnail_url}
+                thumbnail_url={product.thumbnail_url}
               />
             );
           })}
