@@ -1,4 +1,5 @@
 import axiosConfig from "../../app/axiosConfig";
+import { Product } from "../../types/product";
 
 const getProducts = async () => {
   const response = await axiosConfig.get("printful/store/products");
