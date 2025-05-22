@@ -98,9 +98,9 @@ const Product = () => {
         {selectedVariant && (
           <div className={styles.productContainer}>
             <div className={styles.productImageContainer}>
-              {selectedVariant?.files?.length > 0 && selectedVariant.files.find((file: File) => file.type === 'preview') ? (
+              {selectedVariant?.files?.length && selectedVariant?.files?.length > 0 && selectedVariant.files?.find((file: File) => file.type === 'preview') ? (
                 <img
-                  src={selectedVariant.files.find((file: File) => file.type === 'preview')?.preview_url ?? ''}
+                  src={selectedVariant.files?.find((file: File) => file.type === 'preview')?.preview_url ?? ''}
                   className={styles.image}
                   alt={selectedVariant.name}
                 />
