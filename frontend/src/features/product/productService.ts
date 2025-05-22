@@ -24,7 +24,7 @@ const getCategory = async (category) => {
 
 const searchProducts = async (query) => {
   const products = await getProducts();
-  const filteredProducts = products.filter(product =>
+  const filteredProducts = products.filter((product: Product) =>
     product.name.toLowerCase().includes(query.toLowerCase())
   );
   console.log("Hello Guys", filteredProducts)
