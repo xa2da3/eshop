@@ -13,6 +13,7 @@ export interface Product {
 }
 
 export interface Variant {
+  id: number;
   name: string;
   size: string;
   color: string;
@@ -22,5 +23,6 @@ export interface Variant {
 
 export interface File {
   type: string;
-  thumbnail_url: string;
+  preview_url: string;
+  thumbnail_url?: string;
 }
