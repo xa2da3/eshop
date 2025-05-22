@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../features/cart/cartSlice";
 import { CartItem } from "../../types/cart";
-import { File } from "../../types/product";
+import { File, Variant } from "../../types/product";
 import GoToTop from "../../components/components/GoToTop";
 import Spinner from "../../components/components/Spinner";
 
@@ -48,7 +48,7 @@ const Product = () => {
     }
   };
 
-  const handleColorSelection = (color) => {
+  const handleColorSelection = (color: string) => {
     setSelectedColor(color);
     const variant = product?.sync_variants?.find(v => v.color === color && v.size === selectedSize);
     if (variant) {
