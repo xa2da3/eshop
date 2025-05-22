@@ -25,21 +25,33 @@ const initialState: AuthState = {
   status: "",
 };
 
-export const register = createAsyncThunk(
+interface ThunkConfig {
+  rejectValue: string;
+}
+
+export const register = createAsyncThunk<
+  Register, // Return type
+  Register, // Argument type
+  ThunkConfig // Thunk configuration
+>(
   "auth/register",
   async (userData: Register, thunkAPI) => {
     try {
       const response = await authService.register(userData);
-      toast.success('Registration successful!');
+      toast.success("Registration successful!");
       return response;
     } catch (error: any) {
-      toast.error('Registration failed. ' + (error.response?.data?.message || error.message));
+      toast.error("Registration failed. " + (error.response?.data?.message || error.message));
       return thunkAPI.rejectWithValue(error.response?.data?.message || error.message);
     }
   }
 );
 
-export const login = createAsyncThunk(
+export const login = createAsyncThunk<
+  string, // Return type
+  Login, // Argument type
+  ThunkConfig // Thunk configuration
+>(
   "auth/login",
   async (user: Login, thunkAPI) => {
     try {
@@ -53,7 +65,11 @@ export const login = createAsyncThunk(
   }
 );
 
-export const getUser = createAsyncThunk(
+export const getUser = createAsyncThunk<
+  Register, // Return type
+  number, // Argument type
+  ThunkConfig // Thunk configuration
+>(
   "auth/getUser",
   async (userId: number, thunkAPI) => {
     try {
@@ -66,7 +82,11 @@ export const getUser = createAsyncThunk(
   }
 );
 
-export const logout = createAsyncThunk(
+export const logout = createAsyncThunk<
+  void, // Return type
+  void, // Argument type
+  ThunkConfig // Thunk configuration
+>(
   "auth/logout",
   async (_, thunkAPI) => {
     try {
