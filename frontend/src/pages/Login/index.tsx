@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router";
 import { FormEvent, useEffect, useState } from "react";
 import styles from "./index.module.scss";
-import { getUser, login, logout } from "../../features/auth/authSlice";
+import { getUser, login } from "../../features/auth/authSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import Spinner from "../../components/components/Spinner";
 import { NavLink } from "react-router-dom";
