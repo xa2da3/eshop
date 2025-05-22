@@ -15,6 +15,7 @@ export interface Product {
 export interface Variant {
   size: string;
   color: string;
+  retail_price: number;
   files?: File[];
 }
 
