@@ -15,4 +15,9 @@ export interface Product {
 export interface Variant {
   size: string;
   color: string;
+  files?: File[];
+}
+
+export interface File {
+  type: string;
 }
