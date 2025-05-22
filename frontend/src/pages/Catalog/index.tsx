@@ -36,7 +36,7 @@ const Catalog = () => {
 
     const category = navData.find((item) => item.name === id?.toString());
     if (category?.value !== "all") {
-      const pathUrl = ROUTES.find((item) => item.name.toLowerCase() === category.value.toLowerCase());
+      const pathUrl = ROUTES.find((item) => item.name.toLowerCase() === category?.value.toLowerCase());
       if (pathUrl?.url) {
         dispatch(getCategory(pathUrl.url.toLowerCase()));
       }
