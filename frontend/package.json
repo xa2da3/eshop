@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
-    "@tanstack/react-query": "^5.0.0-beta.35",
+    "@tanstack/react-query": "^5.83.0",
     "@types/react-redux": "^7.1.33",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
